@@ -15,13 +15,14 @@
 
 </div>
 
-<div *ngIf="play">
+
+<div class="accueil" *ngIf="play">
 
   <div *ngFor="let hero of ids">
-    <img class="heroImg" (click)="test(hero)" [src]="hero.images.md" /> {{hero.name}}
+    <img class="selectImg" (click)="test(hero)" [src]="hero.images.md" /> {{hero.name}}
   </div>
 
-  <p>SELECT PERSO</p>
-  <button (click)="start() ">start</button>
+  <h1>SELECT PERSO</h1>
+  <button class="acc-button" (click)="start()">start</button>
 
 </div>

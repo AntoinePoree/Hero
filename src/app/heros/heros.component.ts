@@ -11,6 +11,8 @@ import { HttpClient } from '@angular/common/http';
 export class HerosComponent implements OnInit {
 
   durability;
+  ids;
+  selected;
   idHero;
   imageHlg;
   imageHmd;
@@ -36,27 +38,44 @@ export class HerosComponent implements OnInit {
 
   play = true;
 
+
+
   constructor(private http: HttpClient) {
 
   }
 
   ngOnInit(): void {
 
-    let id = 0;
-    let id2 = 0;
-    function getId(n) {
-      id = n;
-      return id;
-    }
+    // let id = 0;
+    // let id2 = 0;
 
-    function getIdP2(n) {
-      id2 = n;
-      return id2;
-    }
-    getIdP2(502);
-    getId(213);
+    // function getId(n) {
+    //   id = n;
+    //   return id;
+    // }
 
-    this.http.get('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/id/' + id + '.json').subscribe((data: any) => {
+    // function getIdP2(n) {
+    //   id2 = n;
+    //   return id2;
+    // }
+
+    // getIdP2(502);
+    // getId(213);
+    this.ids = [];
+    this.selected = [];
+    // this.ids[0] = 502;
+    // this.ids[1] = 213;
+
+    this.http.get('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json').subscribe((data: any) => {
+      // this.ids = data;
+      for (let index = 0; index < 20; index++) {
+        this.ids.push(data[index]);
+      }
+    });
+
+    this.http.get('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/id/' + 404 + '.json').subscribe((data: any) => {
+      // this.ids[0] = data;
+
       this.idHero = parseInt(data.id, 10);
       this.nameH = data.name;
       this.intelligenceH = parseInt(data.powerstats.intelligence, 10);
@@ -70,7 +89,8 @@ export class HerosComponent implements OnInit {
       this.durability = parseInt(data.powerstats.durability, 10);
 
     });
-    this.http.get('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/id/' + id2 + '.json').subscribe((data: any) => {
+    this.http.get('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/id/' + 213 + '.json').subscribe((data: any) => {
+      // this.ids[1] = data;
       this.idHero2 = parseInt(data.id, 10);
       this.nameH2 = data.name;
       this.intelligenceH2 = parseInt(data.powerstats.intelligence, 10);
@@ -95,9 +115,20 @@ export class HerosComponent implements OnInit {
 
   }
 
+  test(me) {
+    // console.log(me);
+    this.selected.push(me);
+    console.log(this.selected);
+
+  }
+
   start() {
     this.play = false;
   }
 
+  getNumber(n) {
+    console.log(this.ids[n].name);
+    //getId()
+  }
 
 }

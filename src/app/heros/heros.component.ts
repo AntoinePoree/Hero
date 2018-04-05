@@ -9,6 +9,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./heros.component.css']
 })
 export class HerosComponent implements OnInit {
+
   durability;
   idHero;
   imageHlg;
@@ -33,11 +34,14 @@ export class HerosComponent implements OnInit {
   intelligenceH2;
   nameH2;
 
+  play = true;
+
   constructor(private http: HttpClient) {
 
   }
 
   ngOnInit(): void {
+
     let id = 0;
     let id2 = 0;
     function getId(n) {
@@ -81,6 +85,7 @@ export class HerosComponent implements OnInit {
 
     });
   }
+
   attack1() {
     console.log("attack j2");
   }
@@ -89,5 +94,10 @@ export class HerosComponent implements OnInit {
     console.log("attack j1");
 
   }
+
+  start() {
+    this.play = false;
+  }
+
 
 }

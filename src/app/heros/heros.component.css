@@ -1,5 +1,7 @@
 .accueil {
-  margin-left: 40vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .acc-button {
@@ -28,11 +30,9 @@
 }
 
 .selectImg {
-  height: 200px;
-  width: 140px;
+  height: 100px;
+  width: 70px;
   border: 3px solid;
-  margin-top: 12px;
-  margin-left: 25px;
 }
 
 .ctnPlayer {

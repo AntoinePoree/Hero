@@ -1,27 +1,29 @@
 <div *ngIf="!play">
 
-  <div id="body">
-    <div class="ctnPlayer">
-      <img class="heroImg" src={{imageHsm}}/>
-      <!--  -->
-      {{durability}} {{idHero}} {{powerH}} {{speedH}} {{strengthH}} {{intelligenceH}} {{nameH}}
-      <button (click)="attack1()">Attack</button>
+  <div class="background">
+    <div id="body">
+      <div class="ctnPlayer">
+        <img class="heroImg" src={{imageHsm}}/>
+        <!--  -->
+        {{durability}} {{idHero}} {{powerH}} {{speedH}} {{strengthH}} {{intelligenceH}} {{nameH}}
+        <button (click)="attack1()">Attack</button>
+      </div>
+
+      <div class="ctnPlayer">
+        <img class="heroImg" src={{imageHsm2}}/>
+        <!--  -->
+        {{durability2}} {{idHero2}} {{powerH2}} {{speedH2}} {{strengthH2}} {{intelligenceH2}} {{nameH2}}
+        <button (click)="attack2()">Attack</button>
+      </div>
     </div>
 
-    <div class="ctnPlayer">
-      <img class="heroImg" src={{imageHsm2}}/>
-      <!--  -->
-      {{durability2}} {{idHero2}} {{powerH2}} {{speedH2}} {{strengthH2}} {{intelligenceH2}} {{nameH2}}
-      <button (click)="attack2()">Attack</button>
-    </div>
   </div>
 
-</div>
+  <div *ngIf="play">
 
-<div *ngIf="play">
-
-  <p>SELECT PERSO</p>
-  <button (click)="start()">start</button>
+    <p>SELECT PERSO</p>
+    <button (click)="start()">start</button>
 
 
+  </div>
 </div>

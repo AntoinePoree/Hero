@@ -1,4 +1,4 @@
-<div *ngIf="!play">
+<div  *ngIf="!play">
 
   <div class="background">
     <div class="ctnPlayer">
@@ -18,9 +18,9 @@
 
 </div>
 
-<div *ngIf="play">
+<div class="accueil" *ngIf="play">
 
-  <p>SELECT PERSO</p>
-  <button (click)="start()">start</button>
+  <h1>SELECT PERSO</h1>
+  <button class="acc-button" (click)="start()">start</button>
 
 </div>

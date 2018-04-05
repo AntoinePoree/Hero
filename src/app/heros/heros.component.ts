@@ -81,4 +81,13 @@ export class HerosComponent implements OnInit {
 
     });
   }
+  attack1() {
+    console.log("attack j2");
+  }
+
+  attack2() {
+    console.log("attack j1");
+
+  }
+
 }

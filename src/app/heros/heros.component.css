@@ -1,0 +1,28 @@
+#body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.heroImg {
+  height: 200px;
+  width: 140px;
+  border: 2px solid black;
+}
+
+.ctnPlayer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 300px;
+  width: 200px;
+}
+
+button {
+  height: 50px;
+  width: 150px;
+  color: white;
+  background-color: darkgreen;
+  font-size: 2em;
+}

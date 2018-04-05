@@ -44,12 +44,14 @@ export class HerosComponent implements OnInit {
       id = n;
       return id;
     }
-    getId(729);
+
     function getIdP2(n) {
       id2 = n;
       return id2;
     }
-    getIdP2(1);
+    getIdP2(502);
+    getId(213);
+
     this.http.get('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/id/' + id + '.json').subscribe((data: any) => {
       this.idHero = parseInt(data.id, 10);
       this.nameH = data.name;

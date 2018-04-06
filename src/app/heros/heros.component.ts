@@ -5,7 +5,6 @@ import { HttpClient } from '@angular/common/http';
 import { viewClassName } from '@angular/compiler';
 import { timeout } from 'q';
 import { Observable } from 'rxjs/Observable';
-import { setInterval } from 'timers';
 
 @Component({
   selector: 'app-heros',
@@ -129,6 +128,7 @@ export class HerosComponent implements OnInit {
 
   koJ1() {
     if (this.selected[0].powerstats.durability <= 0) {
+      this.soundWin();
       alert("joueur 1 KO");
       window.location.reload();
     } else {
@@ -138,6 +138,7 @@ export class HerosComponent implements OnInit {
 
   koJ2() {
     if (this.selected[1].powerstats.durability <= 0) {
+      this.soundWin();
       alert("joueur 2 KO");
       window.location.reload();
     } else {
@@ -145,5 +146,19 @@ export class HerosComponent implements OnInit {
     }
   }
 
+  sound() {
+    var audio = new Audio('/assets/isready.mp3');
+    audio.play();
+  }
+
+  soundOver() {
+    var audio = new Audio('/assets/move.mp3');
+    audio.play();
+  }
+
+  soundWin() {
+    var audio = new Audio('/assets/win.mp3');
+    audio.play();
+  }
 }
 

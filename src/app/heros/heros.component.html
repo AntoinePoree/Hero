@@ -17,23 +17,29 @@
         <button class="button2" (click)="attackS2()" [disabled]="turn == 0" [ngClass]="{'buttonOff': turn == 1}"></button>
       </div>
 
+
+      <audio src="/assets/mc.mp3" autoplay></audio>
+      <div [innerHTML]="htmlStr" class="tab"></div>
+      <div [ngClass]="{'ready': ready == 1}">GET READY FOR THE NEXT BATTLE</div>
     </div>
-    <div [innerHTML]="htmlStr" class="tab"></div>
-    <div [ngClass]="{'ready': ready == 1}">GET READY FOR THE NEXT BATTLE</div>
   </div>
 
-  <div class="accueil" *ngIf="play">
 
-    <div class="selectDiv" *ngFor="let hero of ids">
-      <img class="selectImg" (click)="test(hero)" [src]="hero.images.md" />{{hero.name}}
+  <div *ngIf="play">
+    <div class="accueil">
+      <div class="selectDiv" *ngFor="let hero of ids">
+        <img class="selectImg" (mouseover)="soundOver()" (click)="test(hero)" [src]="hero.images.md" /> {{hero.name}}
+      </div>
+
+      <div class="Select-perso">
+        <h2>SELECT PERSO</h2>
+        <img class="heroImg" src={{selected[0].images.md}}/>
+
+        <button class="acc-button" (click)="sound()" (click)="start()">FIGHT</button>
+
+        <img class="heroImg" src={{selected[1].images.md}}/>
+      </div>
     </div>
 
-    <div class="Select-perso">
-      <h2>SELECT PERSO</h2>
-      <img class="heroImg" src={{selected[0].images.md}}/>
-      <button class="acc-button" (click)="start()">FIGHT</button>
-
-      <img class="heroImg" src={{selected[1].images.md}}/>
-    </div>
   </div>
 </div>

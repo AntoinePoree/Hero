@@ -30,11 +30,16 @@
 }
 
 .selectImg {
-  height: 100px;
-  width: 70px;
+  height: 17vw;
+  width: 13vw;
   border: 3px solid;
 }
-
+.selectDiv{
+  display: flex;
+  flex-direction: column;
+  padding-right: 5px;
+  
+}
 .ctnPlayer {
   display: flex;
   flex-direction: column;
@@ -54,6 +59,7 @@ button {
   animation-duration: 2s;
   animation-iteration-count: infinite;
 }
+
 
 @keyframes playAnime {
   0% {

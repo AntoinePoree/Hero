@@ -22,6 +22,7 @@ export class HerosComponent implements OnInit {
   shoot = 0;
   shoot2 = 0;
   ready = 1;
+  htmlStr = "";
 
   htmlContent: string;
   play = true;
@@ -50,7 +51,6 @@ export class HerosComponent implements OnInit {
   }
 
   attack1() {
-    console.log("attack j2");
     this.selected[1].powerstats.durability = this.selected[1].powerstats.durability - 10;
     this.turn = 1;
     this.shoot = 1;
@@ -60,10 +60,12 @@ export class HerosComponent implements OnInit {
     }, 2000);
 
     this.koJ2();
+
+    this.htmlStr = this.htmlStr + ' ' + this.selected[0].name + ' inflige ' +
+      Math.floor((this.selected[1].powerstats.strength / 10)) + ' de degats <br>';
   }
 
   attack2() {
-    console.log("attack j1");
     this.selected[0].powerstats.durability = this.selected[0].powerstats.durability - 10;
     this.turn = 0;
     this.shoot2 = 1;
@@ -73,6 +75,36 @@ export class HerosComponent implements OnInit {
     }, 2000);
 
     this.koJ1();
+
+    this.htmlStr = this.htmlStr + ' ' + this.selected[1].name + ' inflige ' +
+      Math.floor((this.selected[0].powerstats.strength / 10)) + ' de degats <br>';
+  }
+
+  attackS() {
+    this.selected[1].powerstats.durability = this.selected[1].powerstats.durability - this.selected[1].powerstats.speed;
+    this.turn = 1;
+    this.shoot = 1;
+    setTimeout(() => {
+      this.shoot = 0;
+    }, 500);
+
+    this.koJ2();
+
+    this.htmlStr = this.htmlStr + ' ' + this.selected[0].name + ' inflige ' +
+      Math.floor((this.selected[1].powerstats.strength / 10)) + ' de degats <br>';
+  }
+  attackS2() {
+    this.selected[0].powerstats.durability = this.selected[0].powerstats.durability - this.selected[0].powerstats.speed;
+    this.turn = 0;
+    this.shoot2 = 1;
+    setTimeout(() => {
+      this.shoot2 = 0;
+    }, 500);
+
+    this.koJ1();
+
+    this.htmlStr = this.htmlStr + ' ' + this.selected[1].name + ' inflige ' +
+      Math.floor((this.selected[0].powerstats.strength / 10)) + ' de degats <br>';
   }
 
   test(me) {

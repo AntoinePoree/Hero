@@ -2,13 +2,14 @@
 
   <div class="background">
     <div class="ctnPlayer">
-      <img class="heroImg" src={{selected[0].images.md}}/> {{durability}} {{idHero}} {{powerH}} {{speedH}} {{strengthH}} {{intelligenceH}} {{nameH}}
+      <img class="heroImg" src={{selected[0].images.md}}/> {{selected[0].name}} {{selected[0].powerstats.durability}} {{selected[0].idHero2}} {{selected[0].powerstats.power}}
+      {{selected[0].powerstats.speed}} {{selected[0].powerstats.strength}} {{selected[0].powerstats.intelligence}}
       <button (click)="attack1()">Attack</button>
     </div>
 
     <div class="ctnPlayer">
-      <img class="heroImg" src={{selected[1].images.md}}/> {{selected[1].name}} {{selected[1].powerstats.durability}} {{selected[1].idHero2}} {{selected[1].powerH2}} {{selected[1].speedH2}}
-      {{selected[1].strengthH2}} {{selected[1].intelligenceH2}}
+      <img class="heroImg" src={{selected[1].images.md}}/> {{selected[1].name}} {{selected[1].powerstats.durability}} {{selected[1].idHero2}} {{selected[1].powerstats.power}}
+      {{selected[1].powerstats.speed}} {{selected[1].powerstats.strength}} {{selected[1].powerstats.intelligence}}
       <button (click)="attack2()">Attack</button>
     </div>
   </div>

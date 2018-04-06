@@ -18,9 +18,6 @@
 
   </div>
 
-  <div [ngClass]="{'player1Go': turn == 0}"></div>
-  <div [ngClass]="{'player2Go': turn == 1}"></div>
-
 </div>
 
 
@@ -33,9 +30,9 @@
   <div class="Select-perso">
     <h2>SELECT PERSO</h2>
     <img class="heroImg" src={{selected[0].images.md}}/>
-    <button class="acc-button" (click)="start()" >FIGHT</button>
+    <button class="acc-button" (click)="start()">FIGHT</button>
 
-    
+
     <img class="heroImg" src={{selected[1].images.md}}/>
   </div>
 </div>

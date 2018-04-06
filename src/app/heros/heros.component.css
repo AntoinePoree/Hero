@@ -95,14 +95,6 @@ button {
   }
 }
 
-.player1Go {
-  position: absolute;
-}
-
-.player2Go {
-  position: absolute;
-}
-
 .punch {
   z-index: 1;
   position: fixed;

@@ -7,7 +7,6 @@ import { timeout } from 'q';
 import { Observable } from 'rxjs/Observable';
 import { setInterval } from 'timers';
 
-
 @Component({
   selector: 'app-heros',
   templateUrl: './heros.component.html',
@@ -116,6 +115,7 @@ export class HerosComponent implements OnInit {
   koJ1() {
     if (this.selected[0].powerstats.durability <= 0) {
       alert("joueur 1 KO");
+      window.location.reload();
     } else {
 
     }
@@ -124,6 +124,7 @@ export class HerosComponent implements OnInit {
   koJ2() {
     if (this.selected[1].powerstats.durability <= 0) {
       alert("joueur 2 KO");
+      window.location.reload();
     } else {
 
     }

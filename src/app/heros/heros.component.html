@@ -1,41 +1,45 @@
-<div *ngIf="!play">
+<div class="html">
+  <div *ngIf="!play">
 
-  <div class="background">
+    <div class="background">
 
-    <div class="ctnPlayer">
-      <div [ngClass]="{'punch2': shoot2 == 1}"></div>
-      <img class="heroImg" src={{selected[0].images.md}}/> {{selected[0].name}} {{selected[0].powerstats.durability}} {{selected[0].idHero2}} {{selected[0].powerstats.power}}
-      {{selected[0].powerstats.speed}} {{selected[0].powerstats.strength}} {{selected[0].powerstats.intelligence}}
-      <button (click)="attack1()" [ngClass]="{'buttonOff': turn == 1}" [disabled]="turn == 1">Attack</button>
+      <div class="ctnPlayer">
+        <div [ngClass]="{'punch2': shoot2 == 1}"></div>
+        <img class="heroImg" src={{selected[0].images.md}}/> {{selected[0].name}} {{selected[0].powerstats.durability}} {{selected[0].idHero2}} {{selected[0].powerstats.power}}
+        {{selected[0].powerstats.speed}} {{selected[0].powerstats.strength}} {{selected[0].powerstats.intelligence}}
+        <button (click)="attack1()" [ngClass]="{'buttonOff': turn == 1}" [disabled]="turn == 1">Attack</button>
+      </div>
+
+      <div class="ctnPlayer">
+        <div [ngClass]="{'punch': shoot == 1}"></div>
+        <img class="heroImg" src={{selected[1].images.md}}/> {{selected[1].name}} {{selected[1].powerstats.durability}} {{selected[1].idHero2}} {{selected[1].powerstats.power}}
+        {{selected[1].powerstats.speed}} {{selected[1].powerstats.strength}} {{selected[1].powerstats.intelligence}}
+        <button (click)="attack2()" [disabled]="turn == 0" [ngClass]="{'buttonOff': turn == 1}">Attack</button>
+      </div>
+
     </div>
 
-    <div class="ctnPlayer">
-      <div [ngClass]="{'punch': shoot == 1}"></div>
-      <img class="heroImg" src={{selected[1].images.md}}/> {{selected[1].name}} {{selected[1].powerstats.durability}} {{selected[1].idHero2}} {{selected[1].powerstats.power}}
-      {{selected[1].powerstats.speed}} {{selected[1].powerstats.strength}} {{selected[1].powerstats.intelligence}}
-      <button (click)="attack2()" [disabled]="turn == 0" [ngClass]="{'buttonOff': turn == 1}">Attack</button>
-    </div>
+    <div [ngClass]="{'player1Go': turn == 0}"></div>
+    <div [ngClass]="{'player2Go': turn == 1}"></div>
 
   </div>
 
-  <div [ngClass]="{'player1Go': turn == 0}"></div>
-  <div [ngClass]="{'player2Go': turn == 1}"></div>
 
-</div>
+  <div class="accueil" *ngIf="play">
+
+    <div class="selectDiv" *ngFor="let hero of ids">
+      <img class="selectImg" (click)="test(hero)" [src]="hero.images.md" /> {{hero.name}}
+    </div>
+
+    <div class="Select-perso">
+      <h2>SELECT PERSO</h2>
+      <img class="heroImg" src={{selected[0].images.md}}/>
+      <button class="acc-button" (click)="start()">
+        <span>FIGHT</span>
+      </button>
 
 
-<div class="accueil" *ngIf="play">
-
-  <div class="selectDiv" *ngFor="let hero of ids">
-    <img class="selectImg" (click)="test(hero)" [src]="hero.images.md" /> {{hero.name}}
-  </div>
-
-  <div class="Select-perso">
-    <h2>SELECT PERSO</h2>
-    <img class="heroImg" src={{selected[0].images.md}}/>
-    <button class="acc-button" (click)="start()" >FIGHT</button>
-
-    
-    <img class="heroImg" src={{selected[1].images.md}}/>
+      <img class="heroImg" src={{selected[1].images.md}}/>
+    </div>
   </div>
 </div>

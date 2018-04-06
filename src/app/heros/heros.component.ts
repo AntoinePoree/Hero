@@ -109,9 +109,9 @@ export class HerosComponent implements OnInit {
     console.log("attackSPEED j1");
     this.selected[0].powerstats.durability = this.selected[0].powerstats.durability - this.selected[0].powerstats.speed;
     this.turn = 0;
-    this.shoot = 1;
+    this.shoot2 = 1;
     setTimeout(() => {
-      this.shoot = 0;
+      this.shoot2 = 0;
     }, 500);
 
   }

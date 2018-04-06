@@ -146,17 +146,17 @@ export class HerosComponent implements OnInit {
   }
 
   sound() {
-    const audio = new Audio('./assets/isready.mp3');
+    const audio = new Audio('assets/isready.mp3');
     audio.play();
   }
 
   soundOver() {
-    const audio = new Audio('./assets/move.mp3');
+    const audio = new Audio('assets/move.mp3');
     audio.play();
   }
 
   soundWin() {
-    const audio = new Audio('./assets/win.mp3');
+    const audio = new Audio('assets/win.mp3');
     audio.play();
   }
 }

@@ -2,10 +2,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  background-image: url("https://i.pinimg.com/originals/51/fe/f5/51fef55a766fef4a7d37c99a913e3a82.jpg");
+  background-size: cover;
 }
 
 .acc-button {
-  margin-right: 2vw;
+ background-color: orangered;
+ color: yellow;
+ border-radius: 5px;
 }
 
 .background {
@@ -30,15 +34,18 @@
 }
 
 .selectImg {
-  height: 17vw;
-  width: 13vw;
-  border: 3px solid;
+  height: 15vw;
+  width: 10vw;
+  border: 3px solid black;
 }
 .selectDiv{
   display: flex;
   flex-direction: column;
-  padding-right: 5px;
-  
+  padding-right: 4px;
+  color: white;
+}
+.selectDiv:hover{
+  background-color: peru;
 }
 .ctnPlayer {
   display: flex;
@@ -85,3 +92,14 @@ button {
     border-color: darkblue;
   }
 }
+p {
+color: white;
+ }
+ h2 {
+   position: absolute;
+   left: 43vw;
+   color: aliceblue;
+ }
+ .Select-perso {
+   margin-right: 2vw;
+ }

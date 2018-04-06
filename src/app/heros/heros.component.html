@@ -2,13 +2,16 @@
 
   <div class="background">
     <div class="ctnPlayer">
-      <img class="heroImg" src={{selected[0].images.md}}/> {{durability}} {{idHero}} {{powerH}} {{speedH}} {{strengthH}} {{intelligenceH}} {{nameH}}
+      <img class="heroImg" src={{selected[0].images.md}}/>
+      <p>
+        {{durability}} {{idHero}} {{powerH}} {{speedH}} {{strengthH}} {{intelligenceH}} {{nameH}}</p>
       <button (click)="attack1()">Attack</button>
     </div>
 
     <div class="ctnPlayer">
-      <img class="heroImg" src={{selected[1].images.md}}/> {{selected[1].name}} {{selected[1].powerstats.durability}} {{selected[1].idHero2}} {{selected[1].powerH2}} {{selected[1].speedH2}}
-      {{selected[1].strengthH2}} {{selected[1].intelligenceH2}}
+      <img class="heroImg" src={{selected[1].images.md}}/>
+      <p> {{selected[1].name}} {{selected[1].powerstats.durability}} {{selected[1].idHero2}} {{selected[1].powerH2}} {{selected[1].speedH2}}
+        {{selected[1].strengthH2}} {{selected[1].intelligenceH2}}</p>
       <button (click)="attack2()">Attack</button>
     </div>
   </div>
@@ -19,11 +22,15 @@
 <div class="accueil" *ngIf="play">
 
   <div class="selectDiv" *ngFor="let hero of ids">
- <img class="selectImg" (click)="test(hero)" [src]="hero.images.md" />
- {{hero.name}}
+    <img class="selectImg" (click)="test(hero)" [src]="hero.images.md" /> {{hero.name}}
   </div>
 
-  <h1>SELECT PERSO</h1>
-  <button class="acc-button" (click)="start()">start</button>
+  <div class="Select-perso">
+    <h2>SELECT PERSO</h2>
+    <img class="heroImg" src={{selected[0].images.md}}/>
+    <button class="acc-button" (click)="start()" >FIGHT</button>
 
+    
+    <img class="heroImg" src={{selected[1].images.md}}/>
+  </div>
 </div>

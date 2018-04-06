@@ -10,8 +10,9 @@ import { setInterval } from 'timers';
 @Component({
   selector: 'app-heros',
   templateUrl: './heros.component.html',
-  styleUrls: ['./heros.component.css']
+  styleUrls: ['./heros.component.css'],
 })
+
 export class HerosComponent implements OnInit {
   ids;
   selected;
@@ -20,31 +21,9 @@ export class HerosComponent implements OnInit {
   turn = 0;
   shoot = 0;
   shoot2 = 0;
+  ready = 1;
 
-  // durability;
-  // idHero;
-  // imageHlg;
-  // imageHmd;
-  // imageHsm;
-  // imageHxs;
-  // powerH;
-  // speedH;
-  // strengthH;
-  // intelligenceH;
-  // nameH;
-
-  // durability2;
-  // idHero2;
-  // imageHlg2;
-  // imageHmd2;
-  // imageHsm2;
-  // imageHxs2;
-  // powerH2;
-  // speedH2;
-  // strengthH2;
-  // intelligenceH2;
-  // nameH2;
-
+  htmlContent: string;
   play = true;
 
   constructor(private http: HttpClient) { }
@@ -78,7 +57,7 @@ export class HerosComponent implements OnInit {
 
     setTimeout(() => {
       this.shoot = 0;
-    }, 500);
+    }, 2000);
 
     this.koJ2();
   }
@@ -91,7 +70,7 @@ export class HerosComponent implements OnInit {
 
     setTimeout(() => {
       this.shoot2 = 0;
-    }, 500);
+    }, 2000);
 
     this.koJ1();
   }
@@ -105,6 +84,9 @@ export class HerosComponent implements OnInit {
 
   start() {
     this.play = false;
+    setTimeout(() => {
+      this.ready = 0;
+    }, 2500);
   }
 
   getNumber(n) {
@@ -129,7 +111,6 @@ export class HerosComponent implements OnInit {
 
     }
   }
-
 
 }
 

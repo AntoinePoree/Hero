@@ -100,7 +100,9 @@ button {
   position: fixed;
   top: 25px;
   right: 40px;
-  background-color: rgba(247, 0, 0, 0.8);
+  background-image: url("/assets/explose.gif");
+  background-size: cover;
+  background-position: center;
   height: 200px;
   width: 140px;
 }
@@ -110,7 +112,9 @@ button {
   position: fixed;
   top: 25px;
   left: 36px;
-  background-color: rgba(247, 0, 0, 0.8);
+  background-image: url("/assets/explose.gif");
+  background-size: cover;
+  background-position: center;
   height: 200px;
   width: 140px;
 }
@@ -128,3 +132,29 @@ h2 {
 .Select-perso {
   margin-right: 2vw;
 }
+
+.ready {
+  z-index: 3;
+  position: fixed;
+  top: 20%;
+  color: RED;
+  font-size: 5em;
+  text-align: center;
+  text-shadow: 5px 5px 5px red;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*
+.tab {
+  z-index: 10;
+  position: fixed;
+  font-size: 2em;
+  color: silver;
+  left: 28vw;
+  top: 10px;
+  height: 90vh;
+  width: 500px;
+  border: 2px solid black;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+*/

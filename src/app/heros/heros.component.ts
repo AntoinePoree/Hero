@@ -62,7 +62,7 @@ export class HerosComponent implements OnInit {
     this.koJ2();
 
     this.htmlStr = this.htmlStr + ' ' + this.selected[0].name + ' inflige ' +
-      Math.floor((this.selected[1].powerstats.strength / 10)) + ' de degats <br>';
+      Math.floor((this.selected[1].powerstats.strength / 10)) + ' de degats <br> Tour de Joueur 2';
   }
 
   attack2() {
@@ -77,7 +77,7 @@ export class HerosComponent implements OnInit {
     this.koJ1();
 
     this.htmlStr = this.htmlStr + ' ' + this.selected[1].name + ' inflige ' +
-      Math.floor((this.selected[0].powerstats.strength / 10)) + ' de degats <br>';
+      Math.floor((this.selected[0].powerstats.strength / 10)) + ' de degats <br> Tour de Joueur 1';
   }
 
   attackS() {
@@ -91,7 +91,7 @@ export class HerosComponent implements OnInit {
     this.koJ2();
 
     this.htmlStr = this.htmlStr + ' ' + this.selected[0].name + ' inflige ' +
-      Math.floor((this.selected[1].powerstats.strength / 10)) + ' de degats <br>';
+      Math.floor((this.selected[1].powerstats.strength / 10)) + ' de degats <br> Tour de Joueur 2';
   }
   attackS2() {
     this.selected[0].powerstats.durability = this.selected[0].powerstats.durability - this.selected[0].powerstats.speed;
@@ -104,7 +104,7 @@ export class HerosComponent implements OnInit {
     this.koJ1();
 
     this.htmlStr = this.htmlStr + ' ' + this.selected[1].name + ' inflige ' +
-      Math.floor((this.selected[0].powerstats.strength / 10)) + ' de degats <br>';
+      Math.floor((this.selected[0].powerstats.strength / 10)) + ' de degats <br> Tour de Joueur 1';
   }
 
   test(me) {

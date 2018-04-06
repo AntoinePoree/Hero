@@ -48,7 +48,7 @@ export class HerosComponent implements OnInit {
 
     this.http.get('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json').subscribe((data: any) => {
 
-      for (let index = 0; index < 20; index++) {
+      for (let index = 0; index < 18; index++) {
         this.ids.push(data[index]);
       }
     });

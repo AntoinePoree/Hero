@@ -18,8 +18,9 @@
 
 <div class="accueil" *ngIf="play">
 
-  <div *ngFor="let hero of ids">
-    <img class="selectImg" (click)="test(hero)" [src]="hero.images.md" /> {{hero.name}}
+  <div class="selectDiv" *ngFor="let hero of ids">
+ <img class="selectImg" (click)="test(hero)" [src]="hero.images.md" />
+ {{hero.name}}
   </div>
 
   <h1>SELECT PERSO</h1>

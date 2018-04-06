@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { HttpClient } from '@angular/common/http';
+import { viewClassName } from '@angular/compiler';
+
 
 @Component({
   selector: 'app-heros',
@@ -13,6 +15,7 @@ export class HerosComponent implements OnInit {
   selected;
   powerstats;
   durability;
+  turn = 0;
 
   // durability;
   // idHero;
@@ -66,11 +69,13 @@ export class HerosComponent implements OnInit {
   attack1() {
     console.log("attack j2");
     this.selected[1].powerstats.durability = this.selected[1].powerstats.durability - 10;
+    this.turn = 1;
   }
 
   attack2() {
     console.log("attack j1");
     this.selected[0].powerstats.durability = this.selected[0].powerstats.durability - 10;
+    this.turn = 0;
   }
 
   test(me) {
@@ -89,4 +94,6 @@ export class HerosComponent implements OnInit {
     //getId()
   }
 
+
 }
+

@@ -4,13 +4,13 @@
     <div class="ctnPlayer">
       <img class="heroImg" src={{selected[0].images.md}}/> {{selected[0].name}} {{selected[0].powerstats.durability}} {{selected[0].idHero2}} {{selected[0].powerstats.power}}
       {{selected[0].powerstats.speed}} {{selected[0].powerstats.strength}} {{selected[0].powerstats.intelligence}}
-      <button (click)="attack1()">Attack</button>
+      <button (click)="attack1()" [ngClass]="{'buttonOff': turn == 1}" [disabled]="turn == 1">Attack</button>
     </div>
 
     <div class="ctnPlayer">
       <img class="heroImg" src={{selected[1].images.md}}/> {{selected[1].name}} {{selected[1].powerstats.durability}} {{selected[1].idHero2}} {{selected[1].powerstats.power}}
       {{selected[1].powerstats.speed}} {{selected[1].powerstats.strength}} {{selected[1].powerstats.intelligence}}
-      <button (click)="attack2()">Attack</button>
+      <button (click)="attack2()" [disabled]="turn == 0" [ngClass]="{'buttonOff': turn == 1}">Attack</button>
     </div>
   </div>
 
@@ -20,8 +20,7 @@
 <div class="accueil" *ngIf="play">
 
   <div class="selectDiv" *ngFor="let hero of ids">
- <img class="selectImg" (click)="test(hero)" [src]="hero.images.md" />
- {{hero.name}}
+    <img class="selectImg" (click)="test(hero)" [src]="hero.images.md" /> {{hero.name}}
   </div>
 
   <h1>SELECT PERSO</h1>

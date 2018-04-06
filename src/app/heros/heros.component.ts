@@ -23,6 +23,7 @@ export class HerosComponent implements OnInit {
   shoot2 = 0;
   ready = 1;
   htmlStr = "";
+  item;
 
   htmlContent: string;
   play = true;

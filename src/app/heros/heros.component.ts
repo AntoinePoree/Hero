@@ -3,6 +3,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { HttpClient } from '@angular/common/http';
 import { viewClassName } from '@angular/compiler';
+import { timeout } from 'q';
+import { Observable } from 'rxjs/Observable';
+import { setInterval } from 'timers';
 
 
 @Component({
@@ -16,6 +19,8 @@ export class HerosComponent implements OnInit {
   powerstats;
   durability;
   turn = 0;
+  shoot = 0;
+  shoot2 = 0;
 
   // durability;
   // idHero;
@@ -70,12 +75,21 @@ export class HerosComponent implements OnInit {
     console.log("attack j2");
     this.selected[1].powerstats.durability = this.selected[1].powerstats.durability - 10;
     this.turn = 1;
+    this.shoot = 1;
+    setTimeout(() => {
+      this.shoot = 0;
+    }, 500);
+
   }
 
   attack2() {
     console.log("attack j1");
     this.selected[0].powerstats.durability = this.selected[0].powerstats.durability - 10;
     this.turn = 0;
+    this.shoot2 = 1;
+    setTimeout(() => {
+      this.shoot2 = 0;
+    }, 500);
   }
 
   test(me) {

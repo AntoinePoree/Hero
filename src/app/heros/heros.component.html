@@ -33,15 +33,14 @@
       <img class="selectImg" (click)="test(hero)" [src]="hero.images.md" /> {{hero.name}}
     </div>
 
-    <div class="Select-perso">
-      <h2>SELECT PERSO</h2>
-      <img class="heroImg" src={{selected[0].images.md}}/>
-      <button class="acc-button" (click)="start()">
-        <span>FIGHT</span>
-      </button>
+ 
+
+  <div class="Select-perso">
+    <h2>SELECT PERSO</h2>
+    <img class="heroImg" src={{selected[0].images.md}}/>
+    <button class="acc-button" (click)="start()">FIGHT</button>
 
 
-      <img class="heroImg" src={{selected[1].images.md}}/>
-    </div>
+    <img class="heroImg" src={{selected[1].images.md}}/>
   </div>
 </div>

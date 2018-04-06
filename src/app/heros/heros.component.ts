@@ -7,7 +7,6 @@ import { timeout } from 'q';
 import { Observable } from 'rxjs/Observable';
 import { setInterval } from 'timers';
 
-
 @Component({
   selector: 'app-heros',
   templateUrl: './heros.component.html',
@@ -76,10 +75,12 @@ export class HerosComponent implements OnInit {
     this.selected[1].powerstats.durability = this.selected[1].powerstats.durability - 10;
     this.turn = 1;
     this.shoot = 1;
+
     setTimeout(() => {
       this.shoot = 0;
     }, 500);
 
+    this.koJ2();
   }
 
   attack2() {
@@ -87,9 +88,12 @@ export class HerosComponent implements OnInit {
     this.selected[0].powerstats.durability = this.selected[0].powerstats.durability - 10;
     this.turn = 0;
     this.shoot2 = 1;
+
     setTimeout(() => {
       this.shoot2 = 0;
     }, 500);
+
+    this.koJ1();
   }
   attackS() {
     console.log("attackSPEED j2");
@@ -126,6 +130,24 @@ export class HerosComponent implements OnInit {
   getNumber(n) {
     console.log(this.ids[n].name);
     //getId()
+  }
+
+  koJ1() {
+    if (this.selected[0].powerstats.durability <= 0) {
+      alert("joueur 1 KO");
+      window.location.reload();
+    } else {
+
+    }
+  }
+
+  koJ2() {
+    if (this.selected[1].powerstats.durability <= 0) {
+      alert("joueur 2 KO");
+      window.location.reload();
+    } else {
+
+    }
   }
 
 

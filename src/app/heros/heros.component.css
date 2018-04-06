@@ -7,8 +7,11 @@
 }
 
 .acc-button {
-  padding-top: 40px;
+  height: 3vw;
+  margin-left: 5vw;
+  width: 12vw;
   background-color: orangered;
+  background-size: cover;
   color: yellow;
   border-radius: 5px;
   align-items: center;
@@ -16,7 +19,9 @@
 span{
   position: absolute;
   bottom: 65px;
-  left:46vw
+  left:46vw;
+  font-size: 2em;
+  margin-left: 3vw;
 }
 .background {
   background-image: url("https://i.imgur.com/plr4DLd.gif");
@@ -34,6 +39,7 @@ span{
   border: 3px solid;
   margin-top: 12px;
   margin-left: 25px;
+  margin-right: 2vw;
   animation-name: playAnime;
   animation-duration: 1s;
   animation-iteration-count: infinite;
@@ -65,16 +71,15 @@ span{
   width: 200px;
 }
 
-button {
-  height: 50px;
-  width: 150px;
-  background-color: darkgreen;
+.button {
+  height: 11vw;
+  width: 11vw;
+  background: url("https://opengameart.org/sites/default/files/Attack.png");
+  background-size: cover;
   font-size: 2em;
   margin-left: 21px;
-  border: 1px solid;
-  animation-name: playAttack;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+  border:none;
+
 }
 
 @keyframes playAnime {
@@ -90,17 +95,6 @@ button {
   }
 }
 
-@keyframes playAttack {
-  0% {
-    border-color: royalblue;
-  }
-  25% {
-    border-color: blue;
-  }
-  100% {
-    border-color: darkblue;
-  }
-}
 
 .player1Go {
   position: absolute;
@@ -147,4 +141,17 @@ h2 {
   background-color: black;
   width: 100%;
   height: 55vw;
+}
+.button2 {
+  height: 11vw;
+  width: 11vw;
+  background-image: url("https://d1u5p3l4wpay3k.cloudfront.net/awesomenauts_gamepedia/1/1b/UI_Skillbutton_Brute_Attack.PNG");
+  margin-bottom: -18vw;
+  background-color: rgba(0, 0, 0, 0);
+  background-position: center;
+  background-size: cover;
+  font-size: 2em;
+  margin-left: 21px;
+  border:none;
+
 }

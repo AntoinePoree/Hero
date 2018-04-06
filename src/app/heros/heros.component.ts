@@ -91,6 +91,26 @@ export class HerosComponent implements OnInit {
       this.shoot2 = 0;
     }, 500);
   }
+  attackS() {
+    console.log("attackSPEED j2");
+    this.selected[1].powerstats.durability = this.selected[1].powerstats.durability - this.selected[1].powerstats.speed;
+    this.turn = 1;
+    this.shoot = 1;
+    setTimeout(() => {
+      this.shoot = 0;
+    }, 500);
+
+  }
+  attackS2() {
+    console.log("attackSPEED j1");
+    this.selected[0].powerstats.durability = this.selected[0].powerstats.durability - this.selected[0].powerstats.speed;
+    this.turn = 0;
+    this.shoot = 1;
+    setTimeout(() => {
+      this.shoot = 0;
+    }, 500);
+
+  }
 
   test(me) {
     // console.log(me);

@@ -49,6 +49,7 @@ span {
   height: 15vw;
   width: 10vw;
   border: 3px solid black;
+  box-sizing: border-box;
 }
 
 .selectDiv {
@@ -68,7 +69,7 @@ span {
   flex-direction: column;
   justify-content: space-around;
   height: 300px;
-  width: 200px;
+  width: 160px;
   color: white;
   margin-left: 25px;
 }
@@ -124,7 +125,7 @@ p {
   color: white;
 }
 
-h2 {
+h3 {
   position: absolute;
   left: 42vw;
   color: aliceblue;

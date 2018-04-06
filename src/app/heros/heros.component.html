@@ -5,15 +5,15 @@
 
       <div class="ctnPlayer">
         <div [ngClass]="{'punch2': shoot2 == 1}"></div>
-        <img class="heroImg" src={{selected[0].images.md}}/> {{selected[0].name}} {{selected[0].powerstats.durability}} {{selected[0].idHero2}} {{selected[0].powerstats.power}}
-        {{selected[0].powerstats.speed}} {{selected[0].powerstats.strength}} {{selected[0].powerstats.intelligence}}
+        <img class="heroImg" src={{selected[0].images.md}}/> <p>{{selected[0].name}} <br>Life : {{selected[0].powerstats.durability}} {{selected[0].idHero2}} {{selected[0].powerstats.power}}
+        {{selected[0].powerstats.speed}} {{selected[0].powerstats.strength}} {{selected[0].powerstats.intelligence}}</p>
         <button class="button" (click)="attack1()" [ngClass]="{'buttonOff': turn == 1}" [disabled]="turn == 1"></button>
         <button class="button2" (click)="attackS()" [ngClass]="{'buttonOff': turn == 1}" [disabled]="turn == 1"></button>
       </div>
 
       <div class="ctnPlayer">
         <div [ngClass]="{'punch': shoot == 1}"></div>
-        <img class="heroImg" src={{selected[1].images.md}}/> {{selected[1].name}} {{selected[1].powerstats.durability}} {{selected[1].idHero2}} {{selected[1].powerstats.power}}
+        <img class="heroImg" src={{selected[1].images.md}}/> {{selected[1].name}} <br>Life : {{selected[1].powerstats.durability}} {{selected[1].idHero2}} {{selected[1].powerstats.power}}
         {{selected[1].powerstats.speed}} {{selected[1].powerstats.strength}} {{selected[1].powerstats.intelligence}}
         <button class="button" (click)="attack2()" [disabled]="turn == 0" [ngClass]="{'buttonOff': turn == 1}"></button>
         <button class="button2" (click)="attackS2()" [disabled]="turn == 0" [ngClass]="{'buttonOff': turn == 1}"></button>
@@ -32,8 +32,6 @@
     <div class="selectDiv" *ngFor="let hero of ids">
       <img class="selectImg" (click)="test(hero)" [src]="hero.images.md" /> {{hero.name}}
     </div>
-
- 
 
   <div class="Select-perso">
     <h2>SELECT PERSO</h2>

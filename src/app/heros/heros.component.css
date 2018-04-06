@@ -68,6 +68,8 @@ span{
   justify-content: space-around;
   height: 300px;
   width: 200px;
+  color: white;
+  margin-left: 25px;
 }
 
 .button {
@@ -98,7 +100,7 @@ span{
 .punch {
   z-index: 1;
   position: fixed;
-  top: 25px;
+  top: 27px;
   right: 40px;
   background-color: rgba(247, 0, 0, 0.8);
   height: 200px;
@@ -108,8 +110,8 @@ span{
 .punch2 {
   z-index: 1;
   position: fixed;
-  top: 25px;
-  left: 36px;
+  top: 27px;
+  left: 60px;
   background-color: rgba(247, 0, 0, 0.8);
   height: 200px;
   width: 140px;
@@ -137,7 +139,7 @@ h2 {
   height: 11vw;
   width: 11vw;
   background-image: url("https://d1u5p3l4wpay3k.cloudfront.net/awesomenauts_gamepedia/1/1b/UI_Skillbutton_Brute_Attack.PNG");
-  margin-bottom: -18vw;
+  margin-bottom: -23vw;
   background-color: rgba(0, 0, 0, 0);
   background-position: center;
   background-size: cover;

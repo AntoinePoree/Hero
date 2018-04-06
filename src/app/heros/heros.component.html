@@ -9,7 +9,7 @@
         <button class="button" (click)="attack1()" [ngClass]="{'buttonOff': turn == 1}" [disabled]="turn == 1"></button>
         <button class="button2" (click)="attackS()" [ngClass]="{'buttonOff': turn == 1}" [disabled]="turn == 1"></button>
       </div>
-      <audio src="/assets/mc.mp3" autoplay></audio>
+      <audio src="./assets/mc.mp3" autoplay></audio>
       <div [innerHTML]="htmlStr" class="tab"></div>
       <div [ngClass]="{'ready': ready == 1}">GET READY FOR THE NEXT BATTLE</div>
       <div class="ctnPlayer">

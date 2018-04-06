@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { HttpClient } from '@angular/common/http';
 import { viewClassName } from '@angular/compiler';
@@ -21,7 +20,7 @@ export class HerosComponent implements OnInit {
   shoot = 0;
   shoot2 = 0;
   ready = 1;
-  htmlStr = "";
+  htmlStr = '';
   item;
 
   htmlContent: string;
@@ -123,13 +122,13 @@ export class HerosComponent implements OnInit {
 
   getNumber(n) {
     console.log(this.ids[n].name);
-    //getId()
+    // getId()
   }
 
   koJ1() {
     if (this.selected[0].powerstats.durability <= 0) {
       this.soundWin();
-      alert("joueur 1 KO");
+      alert('joueur 1 KO');
       window.location.reload();
     } else {
 
@@ -139,7 +138,7 @@ export class HerosComponent implements OnInit {
   koJ2() {
     if (this.selected[1].powerstats.durability <= 0) {
       this.soundWin();
-      alert("joueur 2 KO");
+      alert('joueur 2 KO');
       window.location.reload();
     } else {
 
@@ -147,17 +146,17 @@ export class HerosComponent implements OnInit {
   }
 
   sound() {
-    var audio = new Audio('/assets/isready.mp3');
+    const audio = new Audio('./assets/isready.mp3');
     audio.play();
   }
 
   soundOver() {
-    var audio = new Audio('/assets/move.mp3');
+    const audio = new Audio('./assets/move.mp3');
     audio.play();
   }
 
   soundWin() {
-    var audio = new Audio('/assets/win.mp3');
+    const audio = new Audio('./assets/win.mp3');
     audio.play();
   }
 }

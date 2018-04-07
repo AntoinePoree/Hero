@@ -9,9 +9,11 @@
         <button class="button" (click)="attack1()" [ngClass]="{'buttonOff': turn == 1}" [disabled]="turn == 1"></button>
         <button class="button2" (click)="attackS()" [ngClass]="{'buttonOff': turn == 1}" [disabled]="turn == 1"></button>
       </div>
-      <audio src="/assets/mc.mp3" autoplay></audio>
+
+      <!-- <audio src="assets/mc.mp3" autoplay id="player"></audio> -->
       <div [innerHTML]="htmlStr" class="tab"></div>
       <div [ngClass]="{'ready': ready == 1}">GET READY FOR THE NEXT BATTLE</div>
+
       <div class="ctnPlayer">
         <div [ngClass]="{'punch': shoot == 1}"></div>
         <img class="heroImg" src={{selected[1].images.md}}/> {{selected[1].name}} {{selected[1].powerstats.durability}}

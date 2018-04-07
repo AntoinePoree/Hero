@@ -1,3 +1,4 @@
+import { AppComponent } from './../app.component';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -33,7 +34,6 @@ export class HerosComponent implements OnInit {
 
     this.ids = [];
     this.selected = [];
-
 
     this.http.get('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json').subscribe((data: any) => {
 
@@ -147,17 +147,17 @@ export class HerosComponent implements OnInit {
   }
 
   sound() {
-    var audio = new Audio('/assets/isready.mp3');
+    var audio = new Audio('assets/isready.mp3');
     audio.play();
   }
 
   soundOver() {
-    var audio = new Audio('/assets/move.mp3');
+    var audio = new Audio('assets/move.mp3');
     audio.play();
   }
 
   soundWin() {
-    var audio = new Audio('/assets/win.mp3');
+    var audio = new Audio('assets/win.mp3');
     audio.play();
   }
 }
